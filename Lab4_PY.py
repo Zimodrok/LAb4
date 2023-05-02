@@ -14,8 +14,14 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
-            with open('index.html', 'rb') as file:
-                self.wfile.write(file.read())
+            with open('index.html', 'r') as file:
+                html_content = file.read()
+                port_text = f"{self.server.server_port}"
+                # Append the port text to the HTML file
+                html_content = html_content.replace('</body>', f'<input type="text" style="display:none" id="server_port" value = {str(port_text)}></body>')
+                self.wfile.write(bytes(html_content, 'utf-8'))
+
+                
         elif self.path == '/script.js':
             self.send_response(200)
             self.send_header('Content-type', 'text/javascript')

@@ -30,8 +30,8 @@ function returnValue() {
   let point_v = document.getElementById("point_v").value;
   point_v = parseInt(point_v);
   const encoded_func_v = encodeURIComponent(func_v);
-
-  const url = `http://localhost:8080/api_?func_v=${encoded_func_v}&point_v=${point_v}`;
+  const port = document.getElementById("server_port").value;
+  const url = `http://localhost:${port}/api_?func_v=${encoded_func_v}&point_v=${point_v}`;
 
   sendRequest(url, 4);
 }
