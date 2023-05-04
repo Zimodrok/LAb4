@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Application</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" type="text/css" href="output.css">
+    <script src="script.js"></script>
+    <meta charset="utf-8">
+</head>
+<body class="bg-deeppurp">
+    <h1 class="text-center w-full text-stone-200 text-[8vw] -p-10 mt-40">Web Application</h1>
+    <form>         
+        <div class="flex flex-wrap w-full justify-evenly my-25">
+            <div class="w-400 my-6 text-center">
+                <label class="text-stone-200 font-bold text-3xl pl-30 mx-auto">
+                    Функція:
+                </label>
+                <br>
+                <input type="text" id="func_s" placeholder="Введіть функцію:" class="float-center bg-lightdeeppurp text-stone-400 m-2 text-3xl border-0 outline-none rounded mx-auto px-6 py-2 pr-40 w-fit"> 
+            </div>
+            <div class="w-400 my-6 text-center">
+                <label class="text-stone-200 font-bold text-3xl pl-30  mx-auto ">
+                    Координата за Х: 
+                </label>
+                <br>
+                <input type="number" id="point_v" placeholder="Введіть точку дотику:" class="float-center bg-lightdeeppurp text-stone-400 m-2 text-3xl border-0 outline-none rounded mx-auto px-6 py-2 pr-40 w-fit"> 
+            </div>
+        </div>
+    </form>
+    <br>
+    <button onclick="returnValue()" href="#" class=" opacity-80 my-10 bg-lightdeeppurp border-0 text-stone-200 text-center text-3xl py-2 rounded w-full">Запросити</button>
+    <div class="bg-alternativepurp rounded-lg border-0 h-2/3 p-3.5 m-10 text-stone-200 justify-center text-[3vw] mx-auto opacity-80 min-w-400 text-center" id="result">
+    tg(F(x)) = </div>
+</body>
+</html>
