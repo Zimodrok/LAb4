@@ -11,12 +11,10 @@ function sendRequest(url, retriesLeft) {
         document.getElementById("result").innerHTML = "tg(F(x)) = "+ response;
         }
       } else if (retriesLeft > 0) {
-        // Retry the request after 1 second if there are retries left
         setTimeout(() => {
           sendRequest(url, retriesLeft - 1);
         }, 1000);
       } else {
-        // Display an error message if the request failed after all retries
         document.getElementById("result").innerHTML = "Error: Failed to send request.";
       }
     }
